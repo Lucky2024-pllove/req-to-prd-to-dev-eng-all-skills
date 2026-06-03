@@ -2,6 +2,8 @@
 
 本仓库为 **monorepo**，包含三条可独立挂载的 Agent Skill 流水线。欢迎 Issue / PR。
 
+贡献者名单见 [CONTRIBUTORS.md](CONTRIBUTORS.md)（含维护者与 Codex / OpenAI AI 辅助说明）。
+
 ## 仓库结构
 
 | 子目录 | 技能 | 何时改这里 |

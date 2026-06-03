@@ -145,6 +145,8 @@ Do not commit app secrets, tokens, real wiki/tenant IDs, or database connection 
 
 ## Contributing & license
 
+**Contributors**: [CONTRIBUTORS.md](CONTRIBUTORS.md) (maintainer Lucky-WPL; [Codex](https://github.com/openai/codex) / OpenAI for AI-assisted drafting and optimization).
+
 Issues and PRs welcome — [CONTRIBUTING.md](CONTRIBUTING.md). Skill-specific notes live in each subdirectory’s `CONTRIBUTING.md`.
 
 - **Original work**: root [LICENSE](LICENSE) (**MIT**)  

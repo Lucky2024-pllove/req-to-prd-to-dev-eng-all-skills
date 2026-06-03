@@ -210,6 +210,8 @@ req-to-prd-to-dev-eng-all-skills/
 
 ## 贡献与许可证
 
+**贡献者**：[CONTRIBUTORS.md](CONTRIBUTORS.md)（维护者 Lucky-WPL；[Codex](https://github.com/openai/codex) / OpenAI 参与 AI 辅助起草与优化）。
+
 欢迎 Issue / PR。流程见 [CONTRIBUTING.md](CONTRIBUTING.md)；各技能另有：
 
 - [requirements-to-prd/CONTRIBUTING.md](requirements-to-prd/CONTRIBUTING.md)
