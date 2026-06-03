@@ -5,7 +5,7 @@
 | 贡献者 | 角色 / 说明 |
 |--------|-------------|
 | [Lucky-WPL](https://github.com/Lucky2024-pllove) | 维护者；需求与技能流水线设计、评审与发布 |
-| [Codex](https://github.com/openai/codex)（OpenAI） | AI 辅助：技能结构、demo 金样、人机/Agent 友好性优化与文档修订 |
+| [Codex](https://github.com/openai/codex)（OpenAI） | AI 辅助 |
 
 ## 说明
 
