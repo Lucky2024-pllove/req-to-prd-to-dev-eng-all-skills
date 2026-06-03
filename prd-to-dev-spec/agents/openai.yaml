@@ -1,0 +1,4 @@
+interface:
+  display_name: "PRD to Dev Spec"
+  short_description: "PRD to dev specs and test cases"
+  default_prompt: "Use $prd-to-dev-spec to turn my baselined PRD into a development specification, test cases, and a development task confirmation checklist."

@@ -1,0 +1,15 @@
+# Local overrides (may contain credentials or internal URLs)
+*.local.md
+.env
+.env.*
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Local tooling / indexing (not part of the published skill pack)
+.specstory/

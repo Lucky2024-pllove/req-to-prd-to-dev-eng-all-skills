@@ -1,0 +1,4 @@
+interface:
+  display_name: "Requirements to Product Docs"
+  short_description: "Requirement analysis and PRD drafts"
+  default_prompt: "Use $requirements-to-prd to turn my raw product requirement into a requirement analysis document and a PRD."

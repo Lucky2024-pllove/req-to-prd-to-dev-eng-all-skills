@@ -1,0 +1,4 @@
+interface:
+  display_name: "Engineering Delivery"
+  short_description: "Engineering delivery and AI task governance"
+  default_prompt: "Use $engineering-delivery to turn confirmed dev specs and test cases into team assignments, todolist, AI coding task cards, DoD gates, ADR suggestions, delivery checklists, and database script package drafts split by type/table when needed."
