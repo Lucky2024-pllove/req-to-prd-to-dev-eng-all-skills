@@ -14,8 +14,6 @@
 | [expected-traceability.md](expected-traceability.md) | 追溯矩阵 + OQ 登记金样（Agent/下游消费） |
 | [TEST-RUN.md](TEST-RUN.md) | 每次回归的简要记录（可追加） |
 
-若要将金样（如 `expected-prd.md`）同步到飞书，按 [../references/lark-cli.md](../references/lark-cli.md) 与 [../references/wiki-archive-defaults.md](../references/wiki-archive-defaults.md) 自行配置 `lark-cli` 与知识库落点即可。
-
 ## 如何通过自检
 
 对照 [../SKILL.md](../SKILL.md) **Self-Check**：
@@ -35,5 +33,4 @@
 ## 与仓库根目录关系
 
 - 本技能根目录为 `requirements-to-prd/`。  
-- 未配置飞书时，交付物仅为 Markdown；见 [../references/lark-cli.md](../references/lark-cli.md)。  
-- 密钥、token、真实 wiki 标识勿入公开库：见 [../README.md](../README.md)。
+- 交付物为 Markdown；勿将真实业务机密或未脱敏凭证提交公开库：见 [../SECURITY.md](../SECURITY.md)。

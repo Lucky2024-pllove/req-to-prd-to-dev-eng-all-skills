@@ -10,7 +10,7 @@
 ## 说明
 
 - **Lucky-WPL**：仓库维护与产品/工程方法论归属以维护者为准。
-- **Codex**：指 OpenAI Codex 在 Cursor / Codex CLI 等环境中参与起草与迭代的部分；产出须经维护者评审后合入。
+- **Codex**：指 OpenAI Codex 在 Codex CLI 等环境中参与起草与迭代的部分；产出须经维护者评审后合入。
 - `requirements-to-prd/references/` 内上游快照的版权与许可证见各文件及 [requirements-to-prd/references/README.md](requirements-to-prd/references/README.md)。
 
 ## English

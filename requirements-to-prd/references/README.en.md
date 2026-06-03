@@ -1,104 +1,69 @@
 # requirements-to-prd · references
 
-[中文](README.md)
+[简体中文](README.md)
 
-**Requirement analysis/PRD references + local copies for Feishu `lark-cli`**
+**Requirement analysis / PRD methodology references**
 
-This folder is the **progressive reference layer** for the Agent skill [`requirements-to-prd`](../SKILL.md): the parent `SKILL.md` holds the dual-document workflow and templates; here we keep requirement decomposition, feasibility, AI PRD patterns, acceptance/testing boundaries, concise methodology, official CLI readmes, and copies of the bundled lark skills needed for “write a doc / create a wiki node”.
+This folder is the **progressive reference layer** for the Agent skill [`requirements-to-prd`](../SKILL.md): the parent `SKILL.md` holds the dual-document workflow and templates; here we keep requirement decomposition, feasibility, AI PRD patterns, acceptance/testing boundaries, methodology, and diagram rules so the main skill stays lean.
 
-| Parent skill | Location |
-|--------------|----------|
+| Main skill | Parent |
+|------------|--------|
 | [../SKILL.md](../SKILL.md) | `requirements-to-prd/` |
 
 ---
 
-## Table of contents
+## What this folder is for
 
-- [What this folder fixes](#what-this-folder-fixes)
-- [Before / After](#before--after)
-- [Layout](#layout)
-- [How to use](#how-to-use)
-- [What lives where](#what-lives-where)
-
----
-
-## What this folder fixes
-
-- You want to produce **requirement analysis before PRD** with functional atoms, solution feasibility, and AI/traditional fit → use the new analysis references in this folder.  
-- You want the **full 7-layer PRD flow** without pasting the same theory every time → use [`methodology.md`](methodology.md).  
-- The user asked to **push the PRD to Feishu** and you need the order: `config init` vs `auth login`, `docs` vs `wiki` → start from [`lark-cli.md`](lark-cli.md).  
-- You are **offline** or only have this repo open → use **`lark-cli-README` and `lark-*-SKILL` snapshots** here.
-
-> [!NOTE]
-> Snapshots can lag behind the upstream CLI as versions change. **Validate behavior** against the **`@larksuite/cli` you actually have installed** or the `cli` repo clone on disk. Local clone paths, upstream repo, and snapshot notes live in [`lark-cli.md`](lark-cli.md).
+- **Analysis before PRD** — functional atoms, feasibility, AI vs traditional fit → see the decomposition and feasibility files below.
+- **Seven-layer methodology** without pasting theory every turn → [`methodology.md`](methodology.md).
+- **When to add diagrams and safe Mermaid** → [`diagram-guide.md`](diagram-guide.md), [`mermaid-compatibility.md`](mermaid-compatibility.md).
 
 ## Before / After
 
-| | No dedicated `references/` (everything in SKILL) | This layout |
+| | Everything in `SKILL.md` | With `references/` (current) |
 |---|:---:|:---:|
-| **Methodology** | Bloated main file, harder to maintain | Template stays in `SKILL.md`; theory in [`methodology.md`](methodology.md) |
-| **Feishu commands** | Paraphrase from memory each time | Local snapshots + map in [`lark-cli.md`](lark-cli.md) |
-| **Relative links in copied lark skills** | Broken in-repo (`references/...`) | Documented in [`lark-cli.md`](lark-cli.md): resolve under **`skills/.../references/`** in your local `larksuite/cli` clone |
+| **Methodology** | Bloated main file | Templates in `SKILL.md`, theory in `methodology.md` |
+| **Decomposition & acceptance** | Scattered in chat | Dedicated reference files |
 
 ---
 
-## Layout
+## File layout
 
 ```
 references/
-├── README.md                 # Chinese README
-├── README.en.md              # This file
-├── methodology.md            # 7 layers + core toolbox
-├── requirement-decomposition.md # Functional atomization and EARS conversion
-├── solution-feasibility.md   # Real solution discovery and feasibility judgement
-├── ai-prd-patterns.md        # Traditional / AI-enhanced / AI-core PRD patterns
-├── acceptance-testing.md     # Acceptance criteria vs separate test cases
-├── diagram-guide.md          # When to add flow/sequence/architecture diagrams (Chinese)
-├── wiki-archive-defaults.md    # Wiki placeholders (space/parent); do not commit real IDs publicly (中文)
-├── wiki-archive-defaults.en.md # Same (English)
-├── lark-cli.md               # How this skill ties to lark + upstream CLI; no non-official CLIs
-├── lark-cli-README.zh.md     # Upstream lark-cli README (zh) snapshot: install, auth, three-tier commands
-├── lark-shared-SKILL.md      # config, auth, identity — read before any write
-├── lark-doc-SKILL.md         # Feishu Docs; when PRD lands as a doc
-└── lark-wiki-SKILL.md        # Wiki nodes; when PRD lands under a knowledge space
+├── README.md / README.en.md
+├── methodology.md
+├── requirement-decomposition.md
+├── solution-feasibility.md
+├── ai-prd-patterns.md
+├── acceptance-testing.md
+├── diagram-guide.md
+├── mermaid-compatibility.md
+└── agile-iteration.md
 ```
 
-| File | Role | When to open |
-|------|------|--------------|
-| [methodology.md](methodology.md) | 7 layers, 10 tools, four levels of a PRD | When aligning on theory or terms |
-| [requirement-decomposition.md](requirement-decomposition.md) | Intent classification, functional atoms, EARS conversion, traceability | When requirements are vague, fragmented, or need numbering |
-| [solution-feasibility.md](solution-feasibility.md) | Candidate solutions, feasibility, V1 recommendation, anti-patterns | When the proposed solution needs validation |
-| [ai-prd-patterns.md](ai-prd-patterns.md) | Traditional / AI-enhanced / AI-core classification, AI cards, fallback, metrics | When AI, LLMs, prediction, classification, extraction, or recommendation are involved |
-| [acceptance-testing.md](acceptance-testing.md) | PRD acceptance vs separate test case docs | When the user asks about acceptance or test cases |
-| [diagram-guide.md](diagram-guide.md) | Requirement signals → diagram types (Mermaid); PRD §3–§8 | When choosing flowcharts, sequence, state, architecture sketches |
-| [wiki-archive-defaults.en.md](wiki-archive-defaults.en.md) | Wiki target placeholders; user supplies real space/node or private local config | When publishing PRD under a Feishu wiki tree |
-| [lark-cli.md](lark-cli.md) | Read order, relationship to delivery | When user wants Feishu export |
-| [lark-cli-README.zh.md](lark-cli-README.zh.md) | Official install and command model | When checking global `npm` / `lark-cli` usage |
-| [lark-shared-SKILL.md](lark-shared-SKILL.md) | `lark-cli config` / `auth` | First-time setup, permission errors |
-| [lark-doc-SKILL.md](lark-doc-SKILL.md) | `docs` shortcuts, doc tokens | Create/update a Lark doc from Markdown |
-| [lark-wiki-SKILL.md](lark-wiki-SKILL.md) | `wiki`, parent node, space | Create nodes under a wiki tree |
+| File | Use when |
+|------|----------|
+| [methodology.md](methodology.md) | You need the seven-layer map or core tools |
+| [requirement-decomposition.md](requirement-decomposition.md) | Vague input, atomization, EARS, traceability |
+| [solution-feasibility.md](solution-feasibility.md) | User brought a solution; you need the real problem path |
+| [ai-prd-patterns.md](ai-prd-patterns.md) | AI-enhanced or AI-core products |
+| [acceptance-testing.md](acceptance-testing.md) | AC vs separate test-case document |
+| [diagram-guide.md](diagram-guide.md) | Choosing flow/sequence/state/ER diagrams |
+| [mermaid-compatibility.md](mermaid-compatibility.md) | Cross-platform Mermaid self-check |
+| [agile-iteration.md](agile-iteration.md) | MVP and iteration scope |
 
 ---
 
-## How to use
-
-- **Secrets & tokens**: Do not commit App Secret, access tokens, or real wiki `space_id`/node tokens to public Git; see [../README.en.md](../README.en.md) — *Security & privacy*.  
-- **Default path**: finish the Markdown analysis/PRD in [../SKILL.md](../SKILL.md) first; only then use [lark-cli.md](lark-cli.md) for Feishu.  
-- **Do not** replace official `lark-cli` with unofficial “feishu-cli”-style tools for the flows described here.  
-- Other skills in this repo (e.g. `scattered-requirements-wiki-delivery`) that share the same **lark-cli** contract can cross-check auth and commands using this folder.
-
----
-
-## What lives where
+## Split with the main skill
 
 | Content | Location |
 |---------|----------|
-| Dual-document workflow, file naming, templates, checklist | [../SKILL.md](../SKILL.md) |
-| Requirement decomposition, functional atoms, EARS conversion | [requirement-decomposition.md](requirement-decomposition.md) |
-| Candidate solution and feasibility judgement | [solution-feasibility.md](solution-feasibility.md) |
-| AI/traditional solution pattern | [ai-prd-patterns.md](ai-prd-patterns.md) |
-| Acceptance criteria and test case boundary | [acceptance-testing.md](acceptance-testing.md) |
-| 7-layer theory and tool-to-layer map | [methodology.md](methodology.md) |
-| Diagram rules for PRD | [diagram-guide.md](diagram-guide.md) |
-| Wiki archive placeholders (real IDs local/private only) | [wiki-archive-defaults.en.md](wiki-archive-defaults.en.md) |
-| Feishu config and write path | [lark-cli.md](lark-cli.md) + `lark-*` snapshots in this folder |
+| Dual-document workflow, naming, templates, self-check | [../SKILL.md](../SKILL.md) |
+| Decomposition, atoms, EARS | [requirement-decomposition.md](requirement-decomposition.md) |
+| Feasibility and solution choice | [solution-feasibility.md](solution-feasibility.md) |
+| AI PRD patterns | [ai-prd-patterns.md](ai-prd-patterns.md) |
+| Acceptance vs test cases | [acceptance-testing.md](acceptance-testing.md) |
+| Diagram signals | [diagram-guide.md](diagram-guide.md) |
+
+Default deliverables are **Markdown** (in chat or user-specified local paths). Publishing to wikis or doc platforms is up to the user; this skill does not depend on any third-party CLI.

@@ -57,12 +57,11 @@ flowchart LR
   S2 --> B[Dev spec + tests + confirmation]
   B --> S3[engineering-delivery]
   S3 --> C[Assignments + todolist + checklist]
-  S1 -.->|optional| F[lark-cli to Feishu]
 ```
 
 | Step | Directory | Input → output | Notes |
 |:--:|-----------|----------------|-------|
-| 1 | [requirements-to-prd/](requirements-to-prd/) | Fragments → **analysis + PRD** | EARS/GWT, atomization; **optional** Feishu export |
+| 1 | [requirements-to-prd/](requirements-to-prd/) | Fragments → **analysis + PRD** | EARS/GWT, atomization |
 | 2 | [prd-to-dev-spec/](prd-to-dev-spec/) | Reviewed PRD → **dev spec + tests + confirmation** | FR/AC traceability, UI/control detail, AI extensions |
 | 3 | [engineering-delivery/](engineering-delivery/) | Approved materials → **assignments + todolist + checklist** (+ **AI task cards** when coding agents implement) | RACI, DoD, AIC one-at-a-time; DB scripts as drafts only |
 
@@ -132,14 +131,13 @@ Maintainers can run a lightweight **DailyBill** end-to-end check (structure/trac
 | Dependency | Applies to | Required? |
 |------------|------------|-----------|
 | SKILL.md-capable agent | All | **Yes** |
-| [@larksuite/cli](https://github.com/larksuite/cli) | Feishu export in skill 1 only | No |
 | Markdown / Mermaid | Reading long outputs | No |
 
 ---
 
 ## Security & privacy
 
-Do not commit app secrets, tokens, real wiki/tenant IDs, or database connection strings. See [SECURITY.md](SECURITY.md) and per-skill `SECURITY.md` files.
+Do not commit app secrets, tokens, unredacted business data, or database connection strings. See [SECURITY.md](SECURITY.md) and per-skill `SECURITY.md` files.
 
 ---
 

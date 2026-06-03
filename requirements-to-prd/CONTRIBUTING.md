@@ -5,15 +5,14 @@
 ## 适合贡献的内容
 
 - `SKILL.md` 模板、自检清单、工作流说明的改进
-- `references/` 中自撰方法论文档的修订（勿随意改动上游 lark 快照的正文，除非同步更新出处说明）
+- `references/` 中方法论文档的修订
 - `demo/` 金样与回归记录的更新
 - `README.md` / `README.en.md` 的安装、示例提示、安全说明
-- 与新版 `@larksuite/cli` 行为一致的命令示例（须注明 CLI 版本或验证日期）
 
 ## 暂不适合通过 PR 提交的内容
 
-- 飞书 **App Secret**、OAuth token、私钥、真实 `space_id` / `parent_node_token` 等（见 [SECURITY.md](SECURITY.md)）
-- 未经说明的大段上游文档复制（应保留许可证与出处）
+- 真实 API 密钥、客户未脱敏数据、私有凭证（见 [SECURITY.md](SECURITY.md)）
+- 未经说明的大段第三方文档复制（应保留许可证与出处）
 
 ## 提交方式
 
@@ -30,4 +29,4 @@
 
 ## 许可证
 
-对本仓库 **原创部分** 的贡献以 [LICENSE](LICENSE)（MIT）为准。`references/` 内上游快照遵循各自原许可证，见 [references/README.md](references/README.md)。
+对本仓库 **原创部分** 的贡献以 [LICENSE](LICENSE)（MIT）为准。

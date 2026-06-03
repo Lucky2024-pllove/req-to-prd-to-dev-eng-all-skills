@@ -8,7 +8,7 @@
 
 | 子目录 | 技能 | 何时改这里 |
 |--------|------|------------|
-| [requirements-to-prd/](requirements-to-prd/) | 零散需求 → 需求分析 + PRD | 需求拆解、PRD 模板、飞书 `lark-cli` 衔接 |
+| [requirements-to-prd/](requirements-to-prd/) | 零散需求 → 需求分析 + PRD | 需求拆解、PRD 模板、方法论 references |
 | [prd-to-dev-spec/](prd-to-dev-spec/) | PRD → 开发说明 + 测试用例 + 确认单 | 研发交接、追溯链、伪代码/AI 实施 |
 | [engineering-delivery/](engineering-delivery/) | 定稿材料 → 分工 / todolist / 交付清单 | RACI、DoD、ADR、DB 脚本草案边界 |
 
@@ -19,7 +19,7 @@
 1. 先确认改动属于哪个子目录；跨技能模板联动（如 FR/AC 命名、demo 金样）请在 PR 中一并说明。
 2. Fork → 基于 `main` 开分支，单次 PR 聚焦一个主题。
 3. PR 说明包含：**改了什么**、**为什么**、**如何验证**（可引用对应 `demo/TEST-RUN.md` 或 `SKILL.md` Self-Check）。
-4. 勿提交密钥、token、真实 wiki/租户 ID；见 [SECURITY.md](SECURITY.md)。
+4. 勿提交密钥、token、未脱敏业务机密；见 [SECURITY.md](SECURITY.md)。
 
 ## Demo 回归（可选）
 
@@ -33,4 +33,4 @@ requirements-to-prd/demo → prd-to-dev-spec/demo → engineering-delivery/demo
 
 ## 许可证
 
-本仓库原创部分以根目录 [LICENSE](LICENSE)（MIT）为准。`requirements-to-prd/references/` 内上游快照遵循各自原许可证，见该目录 [references/README.md](requirements-to-prd/references/README.md)。
+本仓库原创部分以根目录 [LICENSE](LICENSE)（MIT）为准。

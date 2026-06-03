@@ -6,8 +6,7 @@ description: >-
   when a vague, fragmented, or solution-shaped business/product request needs requirement
   decomposition, functional atomization, feasibility-aware solution discovery, traditional-vs-AI
   solution classification, standard PRD structure, AI/Agent PRD extensions, EARS/GWT requirement
-  expression, acceptance criteria, prioritization, validation metrics, diagrams, and optional
-  Feishu/Lark delivery.
+  expression, acceptance criteria, prioritization, validation metrics, and diagrams.
 ---
 
 # Requirements To Product Docs
@@ -67,7 +66,6 @@ Load only the references needed for the current request:
 | Acceptance criteria vs test cases | [references/acceptance-testing.md](references/acceptance-testing.md) |
 | Diagram selection | [references/diagram-guide.md](references/diagram-guide.md) |
 | Mermaid rendering compatibility | [references/mermaid-compatibility.md](references/mermaid-compatibility.md) |
-| Feishu/Lark delivery | [references/lark-cli.md](references/lark-cli.md) |
 
 ## Agent Compatibility
 
@@ -105,7 +103,7 @@ Extract:
 | Project name | Infer or mark `待补充` |
 | Requirement type | New product / feature / process optimization / AI application / integration / reporting / other |
 | Current shape | Problem statement / feature wish / proposed solution / mixed |
-| Delivery mode | Analysis + PRD by default; local files if requested; Feishu only if explicitly requested |
+| Delivery mode | Analysis + PRD by default; local files if requested |
 
 ### 2. Requirement Analysis
 
@@ -427,7 +425,3 @@ Before final delivery, verify:
 - [ ] File names include the project name when writing documents.
 - [ ] Draft/baseline status is explicit, and the PRD is ready for `prd-to-dev-spec` only after human approval.
 - [ ] Demo files were not loaded as generation context unless the user asked for demo validation.
-
-## Feishu/Lark Delivery
-
-Only deliver to Feishu/Lark when the user explicitly asks. First finish or confirm the Markdown content, then follow [references/lark-cli.md](references/lark-cli.md). Do not invent document links, tokens, or wiki locations.

@@ -68,7 +68,7 @@
 | **文档链** | 段落重复、口径不一 | 三阶段默认文件名与章节约定 |
 | **追溯** | FR、用例、任务对不上 | `FA→FR→AC→模块/TC→任务` 贯穿 |
 | **挂载** | 一个大文件夹难维护 | 按阶段只挂一个子目录 |
-| **飞书** | 仅第一个技能可选 `lark-cli` | 其余阶段纯 Markdown，无平台绑定 |
+| **交付形态** | 三阶段均为 Markdown | 无第三方 CLI 或平台绑定 |
 | **回归** | 无固定用例 | 三目录 `demo/` 共用 DailyBill 轻量链 |
 
 ---
@@ -83,13 +83,12 @@ flowchart LR
   S2 --> D2[开发说明 + 测试用例 + 确认单]
   D2 --> S3[engineering-delivery]
   S3 --> D3[分工计划 + todolist + 交付检查清单]
-  S1 -.->|可选| L[lark-cli 写飞书]
   S3 -.->|若涉及库表| DB[SQL 脚本草案 · 人工审阅执行]
 ```
 
 | 顺序 | 子目录 | 默认产出（文件名含 `{project-name}`） | 要点 |
 |:--:|--------|----------------------------------------|------|
-| **1** | [requirements-to-prd/](requirements-to-prd/) | 需求分析文档、PRD | EARS/GWT、功能原子化、MVP/Out of Scope；**可选**飞书归档 |
+| **1** | [requirements-to-prd/](requirements-to-prd/) | 需求分析文档、PRD | EARS/GWT、功能原子化、MVP/Out of Scope |
 | **2** | [prd-to-dev-spec/](prd-to-dev-spec/) | 开发说明文档、测试用例、开发任务确认单 | 菜单/控件级细节、伪代码/Mermaid、AI Prompt 包草案 |
 | **3** | [engineering-delivery/](engineering-delivery/) | 开发分工计划、todolist、工程交付检查清单；（**AI 编码时** + AI-Agent 任务卡） | RACI、DoD/门禁、ADR；AIC 一次一卡；DB **只出脚本草案**，不连目标库 |
 
@@ -104,7 +103,7 @@ flowchart LR
 1) requirements-to-prd 输出需求分析 + PRD；
 2) prd-to-dev-spec 基于 PRD 输出开发说明、测试用例、开发任务确认单；
 3) engineering-delivery 基于上述定稿材料输出分工计划、todolist、工程交付检查清单；若由编码 Agent 实现，另输出 AI-Agent 任务卡且 todolist 实现项链接 AIC。
-项目名：xxx。默认只在对话输出 Markdown，不要假设已写飞书或已执行数据库。
+项目名：xxx。默认只在对话输出 Markdown，不要假设已执行数据库。
 ```
 
 **只用一个阶段：** 在提示中明确子目录名即可，例如「请只按 prd-to-dev-spec 的 SKILL.md …」。
@@ -122,7 +121,6 @@ cd req-to-prd-to-dev-eng-all-skills
 |------|------|
 | **挂载** | 将需要的**子目录**（非仓库根）加入 Agent 的 skills 路径 — 详见 Cursor / Claude Code 等官方文档 |
 | **阅读** | 执行前打开对应 [SKILL.md](requirements-to-prd/SKILL.md)；复杂规则按需读 `references/` |
-| **飞书** | 仅 [requirements-to-prd](requirements-to-prd/) 需要 `@larksuite/cli` 与飞书应用授权 |
 
 ---
 
@@ -175,7 +173,6 @@ req-to-prd-to-dev-eng-all-skills/
 | 依赖 | 适用技能 | 必需？ |
 |------|----------|--------|
 | 支持 **SKILL.md** 的 Agent | 全部 | **是** |
-| [@larksuite/cli](https://github.com/larksuite/cli) | 仅 requirements-to-prd 写飞书 | 否 |
 | Markdown / Mermaid（可选） | 阅读长篇交付物 | 否 |
 
 本仓库**不包含**项目管理 SaaS、CI 产品或数据库客户端；门禁与脚本需结合你方环境落地。
@@ -194,7 +191,7 @@ req-to-prd-to-dev-eng-all-skills/
 
 | 类别 | 说明 |
 |------|------|
-| 飞书密钥与 token | 见 [requirements-to-prd/SECURITY.md](requirements-to-prd/SECURITY.md) |
+| 业务机密与 API 密钥 | 见各子目录 [SECURITY.md](requirements-to-prd/SECURITY.md) |
 | API / 模型 / DB 密钥 | 见 [prd-to-dev-spec/SECURITY.md](prd-to-dev-spec/SECURITY.md)、[engineering-delivery/SECURITY.md](engineering-delivery/SECURITY.md) |
 | 本地覆盖 | `*.local.md`、`.env*` — 见根 [.gitignore](.gitignore) |
 
