@@ -2,7 +2,7 @@
   <h1>req-to-prd-to-dev-eng-all-skills</h1>
   <p>
     <strong>需求 → PRD → 开发说明 → 工程交付</strong><br>
-    一套面向 Agent 的开放 <strong>SKILL.md</strong> <strong>monorepo</strong>：把碎片化需求整理成<strong>需求分析 + PRD</strong>，再落地为<strong>开发说明、测试用例、开发任务确认单</strong>，最后产出<strong>分工计划、todolist、工程交付检查清单</strong>（及按需的数据库脚本草案、AI 任务卡）。<br>
+    一套面向 Agent 的开放 <strong>SKILL.md</strong> <strong>monorepo</strong>：把需求整理成<strong>需求分析 + PRD</strong>，再落地为<strong>开发说明、测试用例、开发任务确认单</strong>，最后产出<strong>分工计划、todolist、工程交付检查清单</strong>（及按需的数据库脚本草案、AI 任务卡）。<br>
     三个子目录可<strong>单独挂载</strong>，也可按流水线顺序串联；交付物以 <strong>Markdown</strong> 为主，适用于 Cursor、Claude Code、Codex 等环境。
   </p>
 </div>
