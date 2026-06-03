@@ -8,7 +8,7 @@
 
 | 子目录 | 技能 | 何时改这里 |
 |--------|------|------------|
-| [requirements-to-prd/](requirements-to-prd/) | 零散需求 → 需求分析 + PRD | 需求拆解、PRD 模板、方法论 references |
+| [requirements-to-prd/](requirements-to-prd/) | 用户需求 → 需求分析 + PRD | 需求拆解、PRD 模板、方法论 references |
 | [prd-to-dev-spec/](prd-to-dev-spec/) | PRD → 开发说明 + 测试用例 + 确认单 | 研发交接、追溯链、伪代码/AI 实施 |
 | [engineering-delivery/](engineering-delivery/) | 定稿材料 → 分工 / todolist / 交付清单 | RACI、DoD、ADR、DB 脚本草案边界 |
 

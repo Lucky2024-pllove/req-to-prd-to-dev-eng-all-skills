@@ -53,7 +53,7 @@
 
 | 你现在的阶段 | 挂载哪个子目录 |
 |--------------|----------------|
-| 只有口头/草稿需求 | [requirements-to-prd/](requirements-to-prd/) |
+| 只有用户需求 | [requirements-to-prd/](requirements-to-prd/) |
 | 已有 PRD，要交给研发 | [prd-to-dev-spec/](prd-to-dev-spec/) |
 | 材料已定稿，要分工与交付门禁 | [engineering-delivery/](engineering-delivery/) |
 
@@ -77,7 +77,7 @@
 
 ```mermaid
 flowchart LR
-  U[零散需求] --> S1[requirements-to-prd]
+  U[用户需求] --> S1[requirements-to-prd]
   S1 --> D1[需求分析 + PRD]
   D1 --> S2[prd-to-dev-spec]
   S2 --> D2[开发说明 + 测试用例 + 确认单]

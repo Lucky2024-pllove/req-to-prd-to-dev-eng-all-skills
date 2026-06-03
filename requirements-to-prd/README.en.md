@@ -1,8 +1,8 @@
 <div align="center">
   <h1>requirements-to-prd</h1>
   <p>
-    <strong>Fragments → requirement analysis + PRD</strong><br>
-    An open <strong>SKILL.md</strong> for agents: turn rough notes into a <strong>requirement analysis document</strong> and a shippable <strong>Markdown PRD</strong> with functional atomization, feasibility-aware solution discovery, AI/traditional solution fit, EARS / GWT, scope, and checklists. Details in <a href="./SKILL.md">SKILL.md</a> and <a href="./references/README.en.md">references/</a>.
+    <strong>User requirements → requirement analysis + PRD</strong><br>
+    An open <strong>SKILL.md</strong> for agents: turn user requirements into a <strong>requirement analysis document</strong> and a shippable <strong>Markdown PRD</strong> with functional atomization, feasibility-aware solution discovery, AI/traditional solution fit, EARS / GWT, scope, and checklists. Details in <a href="./SKILL.md">SKILL.md</a> and <a href="./references/README.en.md">references/</a>.
   </p>
 </div>
 
@@ -46,7 +46,7 @@
 
 ## What it solves
 
-Early-stage product work often starts with **fragments**. Teams need a **requirement analysis document** to decide the real problem, feasible solution, and functional atoms, then a **complete, testable PRD** for design, engineering, QA, and stakeholders—and as input to downstream `prd-to-dev-spec`.
+Early-stage product work often starts with **user requirements**. Teams need a **requirement analysis document** to decide the real problem, feasible solution, and functional atoms, then a **complete, testable PRD** for design, engineering, QA, and stakeholders—and as input to downstream `prd-to-dev-spec`.
 
 **requirements-to-prd** encodes dual-document output, project-name file naming, functional atomization, EARS / GWT, scope, and checklists in `SKILL.md`. Default deliverable: **Markdown** (in chat or local files).
 
@@ -76,7 +76,7 @@ use the project name in file names; output in chat first.
 
 ```mermaid
 flowchart LR
-  U[Fragments] --> A[Analysis doc]
+  U[User requirements] --> A[Analysis doc]
   A --> P[Markdown PRD]
   P --> C[Chat or local files]
   R[references/] -.-> S[SKILL.md]

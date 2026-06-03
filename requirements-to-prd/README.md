@@ -1,8 +1,8 @@
 <div align="center">
   <h1>requirements-to-prd</h1>
   <p>
-    <strong>零散需求 → 需求分析文档 + PRD</strong><br>
-    面向 Agent 的开放 <strong>SKILL.md</strong>：把口头或草稿式需求，先拆成 <strong>需求分析文档</strong>，再整理成可交付的 <strong>Markdown PRD</strong>（含功能原子化、方案可行性、AI/传统方案适配、EARS / GWT、范围与自检）。细则与方法论见 <a href="./SKILL.md">SKILL.md</a> 与 <a href="./references/README.md">references/</a>。
+    <strong>用户需求 → 需求分析文档 + PRD</strong><br>
+    面向 Agent 的开放 <strong>SKILL.md</strong>：把用户需求，先拆成 <strong>需求分析文档</strong>，再整理成可交付的 <strong>Markdown PRD</strong>（含功能原子化、方案可行性、AI/传统方案适配、EARS / GWT、范围与自检）。细则与方法论见 <a href="./SKILL.md">SKILL.md</a> 与 <a href="./references/README.md">references/</a>。
   </p>
 </div>
 
@@ -46,7 +46,7 @@
 
 ## 它解决什么问题
 
-产品/项目早期只有**碎片化描述**时，团队既需要一份能判断「真正问题、可行方案、功能拆解」的**需求分析文档**，也需要一份**结构完整、可测试、可排期**的 PRD，便于设计、研发、测试、业务对齐，并作为下游 `prd-to-dev-spec` 的输入。
+产品/项目早期收到**用户需求**时，团队既需要一份能判断「真正问题、可行方案、功能拆解」的**需求分析文档**，也需要一份**结构完整、可测试、可排期**的 PRD，便于设计、研发、测试、业务对齐，并作为下游 `prd-to-dev-spec` 的输入。
 
 **requirements-to-prd** 在 `SKILL.md` 里约定双文档输出、项目名文件命名、功能原子化、EARS / GWT、范围与自检清单；默认交付 **Markdown**（对话全文或本地文件）。
 

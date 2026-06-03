@@ -2,7 +2,7 @@
   <h1>req-to-prd-to-dev-eng-all-skills</h1>
   <p>
     <strong>Requirements → PRD → Dev spec → Engineering delivery</strong><br>
-    A monorepo of open <strong>SKILL.md</strong> packs for agents: turn fragmented asks into analyzable requirements and a PRD, then into developer-facing specs and tests, then into assignments, DoD, and delivery checklists. Each subdirectory can be <strong>mounted alone</strong> or used in sequence. Outputs are <strong>Markdown-first</strong> for Cursor, Claude Code, Codex, and similar runtimes.
+    A monorepo of open <strong>SKILL.md</strong> packs for agents: turn user requirements into requirement analysis and a PRD, then into developer-facing specs and tests, then into assignments, DoD, and delivery checklists. Each subdirectory can be <strong>mounted alone</strong> or used in sequence. Outputs are <strong>Markdown-first</strong> for Cursor, Claude Code, Codex, and similar runtimes.
   </p>
 </div>
 
@@ -51,7 +51,7 @@ Early-stage product work often needs **consistent, traceable documents**—not b
 
 ```mermaid
 flowchart LR
-  R[Raw requirements] --> S1[requirements-to-prd]
+  R[User requirements] --> S1[requirements-to-prd]
   S1 --> A[Analysis + PRD]
   A --> S2[prd-to-dev-spec]
   S2 --> B[Dev spec + tests + confirmation]
@@ -61,7 +61,7 @@ flowchart LR
 
 | Step | Directory | Input → output | Notes |
 |:--:|-----------|----------------|-------|
-| 1 | [requirements-to-prd/](requirements-to-prd/) | Fragments → **analysis + PRD** | EARS/GWT, atomization |
+| 1 | [requirements-to-prd/](requirements-to-prd/) | User requirements → **analysis + PRD** | EARS/GWT, atomization |
 | 2 | [prd-to-dev-spec/](prd-to-dev-spec/) | Reviewed PRD → **dev spec + tests + confirmation** | FR/AC traceability, UI/control detail, AI extensions |
 | 3 | [engineering-delivery/](engineering-delivery/) | Approved materials → **assignments + todolist + checklist** (+ **AI task cards** when coding agents implement) | RACI, DoD, AIC one-at-a-time; DB scripts as drafts only |
 
